@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentación de la API - Roblox Custom API</title>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Documentación de la API Custom para Roblox</h1>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="../register.html">Registro</a></li>
+        <li><a href="../login.html">Iniciar Sesión</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Endpoints Disponibles</h2>
+      
+      <h3>1. Registro de Usuarios</h3>
+      <p><strong>Endpoint:</strong> <code>POST /register</code></p>
+      <p>Permite registrar a un nuevo usuario en la API.</p>
+      <p><strong>Parámetros:</strong></p>
+      <ul>
+        <li><code>username</code> (string) - Nombre de usuario.</li>
+        <li><code>email</code> (string) - Correo electrónico.</li>
+        <li><code>password</code> (string) - Contraseña del usuario.</li>
+      </ul>
+      <p><strong>Ejemplo de Solicitud:</strong></p>
+      <pre><code>{
+  "username": "robloxPlayer123",
+  "email": "player@example.com",
+  "password": "securePassword"
+}</code></pre>
+
+      <h3>2. Inicio de Sesión</h3>
+      <p><strong>Endpoint:</strong> <code>POST /login</code></p>
+      <p>Permite que un usuario existente inicie sesión.</p>
+      <p><strong>Parámetros:</strong></p>
+      <ul>
+        <li><code>username</code> (string) - Nombre de usuario.</li>
+        <li><code>password</code> (string) - Contraseña del usuario.</li>
+      </ul>
+      <p><strong>Ejemplo de Solicitud:</strong></p>
+      <pre><code>{
+  "username": "robloxPlayer123",
+  "password": "securePassword"
+}</code></pre>
+
+      <h3>3. Envío de Evento de Telemetría</h3>
+      <p><strong>Endpoint:</strong> <code>POST /analytics/event</code></p>
+      <p>Registra un evento personalizado.</p>
+      <p><strong>Parámetros:</strong></p>
+      <ul>
+        <li><code>eventType</code> (string) - Tipo de evento (ej: "item_comprado").</li>
+        <li><code>userId</code> (string) - ID del usuario que genera el evento.</li>
+        <li><code>details</code> (object) - Detalles adicionales del evento.</li>
+      </ul>
+      <p><strong>Ejemplo de Solicitud:</strong></p>
+      <pre><code>{
+  "eventType": "nivel_completado",
+  "userId": "12345",
+  "details": {
+    "nivel": 5,
+    "tiempo": "02:34"
+  }
+}</code></pre>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 API Custom para Roblox Studio</p>
+  </footer>
+</body>
+</html>
